@@ -7,12 +7,23 @@
     <title>Canvas sera nuestra pantalla</title>
 </head>
 <body>
-    <canvas></canvas>
+    <canvas width="600" height="400"></canvas>
     <script>
         var screen = document.querySelector("canvas");
         var brush = screen.getContext("2d");
 
-        
+        // pantalla
+        brush.fillStyle = "lightgrey"; // propiedad
+        brush.fillRect(0, 0, 600, 400); // color black for default
+
+        brush.fillStyle = "black";
+        brush.fillRect(0, 0, 200, 400);
+
+        brush.fillStyle = "yellow";
+        brush.fillRect(200, 0, 400, 400);
+
+        brush.fillStyle = "red";
+        brush.fillRect(400, 0, 600, 400);
     </script>
 </body>
 </html>
