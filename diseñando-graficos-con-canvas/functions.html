@@ -13,23 +13,16 @@
         var screen = document.querySelector("canvas");
         var brush = screen.getContext("2d");
 
-        brush.fillStyle = "green";
-        brush.fillRect(0, 0, 50, 50);
-        brush.strokeStyle = "black";
-        brush.strokeRect(0, 0, 50, 50);
+        function drawCuadradateGreen(coordenada){
+            brush.fillStyle = "green";
+            brush.fillRect(coordenada.x, coordenada.y, 50, 50);
+            brush.strokeStyle = "black";
+            brush.strokeRect(coordenada.x, coordenada.y, 50, 50);
+        }
 
-        brush.fillRect(50, 0, 50, 50);
-        brush.strokeRect(50, 0, 50, 50);
-
-        brush.fillRect(100, 0, 50, 50);
-        brush.strokeRect(100, 0, 50, 50);
-
-        brush.fillRect(150, 0, 50, 50);
-        brush.strokeRect(150, 0, 50, 50);
-
-        brush.fillRect(200, 0, 50, 50);
-        brush.strokeRect(200, 0, 50, 50);
-
+        drawCuadradateGreen({x: 0, y: 0});
+        drawCuadradateGreen({x: 50, y: 0});
+        drawCuadradateGreen({x: 100, y: 0});
     </script>
 </body>
 </html>
