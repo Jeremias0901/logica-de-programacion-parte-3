@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo Isosceles</title>
+</head>
+<body>
+    <canvas width="400" height="400"></canvas>
+    <script>
+        var screen = document.querySelector("canvas");
+        var brush = screen.getContext("2d");
+
+        drawTriangule({x: 50, y: 50}, {x: 400, y: 400}, {x:50, y:400}, "black");
+        drawTriangule({x: 100, y: 175}, {x: 275, y: 350}, {x:100, y:350}, "white");
+
+        function drawTriangule(StartPoint, MiddlePoint, EndPoint, color){
+            brush.fillStyle = color;
+            brush.beginPath();
+            
+            brush.moveTo(StartPoint.x, StartPoint.y);
+            brush.lineTo(MiddlePoint.x, MiddlePoint.y);
+            brush.lineTo(EndPoint.x, EndPoint.y);
+            
+            brush.fill();
+        }
+    </script>
+</body>
+</html>
