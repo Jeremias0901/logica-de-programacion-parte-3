@@ -12,9 +12,11 @@
         var screen = document.querySelector("canvas");
         var brush = screen.getContext("2d");
 
+        /* 
         // pantalla
         brush.fillStyle = "lightgrey"; // propiedad
         brush.fillRect(0, 0, 600, 400); // color black for default
+        */
 
         brush.fillStyle = "black";
         brush.fillRect(0, 0, 200, 400);
@@ -24,6 +26,27 @@
 
         brush.fillStyle = "red";
         brush.fillRect(400, 0, 600, 400);
+
+        brush.fillStyle = "orange";
+        brush.beginPath();
+        brush.moveTo(300, 200); // punto absoluto
+
+        brush.lineTo(200, 400);
+        brush.lineTo(400, 400);
+        brush.fill();
+
+        brush.fillStyle = "blue";
+        brush.beginPath();
+        var radio = 50;
+        brush.arc(300, 200, radio, 0, Math.PI / 2);
+        brush.fill();
+
+        brush.beginPath();
+        brush.moveTo(300, 200); // punto absoluto
+        brush.fillStyle = "red";
+        brush.lineTo(350, 200);
+        brush.lineTo(300, 250);
+        brush.fill();
     </script>
 </body>
 </html>
